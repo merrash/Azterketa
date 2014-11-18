@@ -1,2 +1,1 @@
-una;uno*0*2*false#dos*34*0*true#tres*2*0*true#;grgcrs
-dos;uno*0*2*false#dos*34*0*true#tres*2*0*true#;frgf
+uno;uno*1*0*true#;ffff

@@ -2,6 +2,9 @@ import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.File;
 import java.io.FileWriter;
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.io.BufferedReader;
 
 public class cenaAmigos{
 
@@ -57,12 +60,14 @@ public class cenaAmigos{
 					cantidad = sc.nextInt();
 					ingrediente.setCantidadUnidad(cantidad);
 				}
+
 				ingredientes.add(ingrediente);
 			}
 			
 			receta.setIngrediente(ingredientes);
 			recetas.add(receta);
 		}
+		System.out.println(recetas.get(0).getNombreReceta());
 		ingredientes2 = recetas.get(0).getIngrediente();
 		for(int z=0; z<ingredientes2.size(); z++){
 			System.out.println(ingredientes2.get(z).getNombreIngrediente());
@@ -93,5 +98,24 @@ public class cenaAmigos{
 		}catch(Exception z){
 			System.out.println("Error: "+z);
 		}
+
+		/*try{
+			File listaRecetas2 = new File("./listaRecetas.txt");
+			FileInputStream fis = new FileInputStream(listaRecetas2);
+	        InputStreamReader isr = new InputStreamReader(fis, "UTF8");
+	        BufferedReader br = new BufferedReader(isr);
+
+	        String linea;
+	        linea = br.readLine();
+	        String [] campos = null;
+	        while(linea!=null){
+	        	 campos = linea.split(";");
+	        }
+	        System.out.println(campos[0]);
+	        System.out.println(campos[1]);
+	    }catch(Exception ioe){
+	    	System.out.println("Error: "+ioe);
+	    }
+	    */
 	}
 }

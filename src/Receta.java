@@ -7,7 +7,7 @@ public class Receta  {
 	public Receta(){}
 
 	public ArrayList<Ingrediente> getIngrediente(){
-		return ingrediente;
+		return this.ingrediente;
 	}
 	public void setIngrediente(ArrayList<Ingrediente> ingrediente){
 		this.ingrediente = ingrediente;
