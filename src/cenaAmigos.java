@@ -34,7 +34,9 @@ public class cenaAmigos{
 
 			System.out.println("\n¿Cuantos ingredientes vas a usar? (num): ");
 			cuantosIngredientes = sc.nextInt();
+
 			ingredientes = new ArrayList<Ingrediente>();
+			
 			for(int e=0; e<cuantosIngredientes; e++){
 				Ingrediente ingrediente = new Ingrediente();
 				System.out.println("\nEscribe el nombre del ingrediente: ");
